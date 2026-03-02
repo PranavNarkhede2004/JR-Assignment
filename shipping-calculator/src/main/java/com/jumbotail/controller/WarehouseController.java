@@ -21,14 +21,14 @@ public class WarehouseController {
     public ResponseEntity<WarehouseResponse> getNearestWarehouse(
             @RequestParam String sellerId,
             @RequestParam String productId) {
-        
+
         Warehouse nearest = warehouseService.findNearestWarehouse(sellerId, productId);
-        
+
         WarehouseResponse response = new WarehouseResponse(
                 nearest.getId(),
-                new LocationDto(nearest.getLat(), nearest.getLng())
-        );
-        
+                new LocationDto(nearest.getLat(), nearest.getLng()),
+                nearest.isColdStorageAvailable());
+
         return ResponseEntity.ok(response);
     }
 }

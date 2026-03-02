@@ -10,4 +10,6 @@ import lombok.NoArgsConstructor;
 public class CalculateShippingResponse {
     private double shippingCharge;
     private WarehouseResponse nearestWarehouse;
+    private String customerStoreType;
+    private Integer customerLoyaltyPoints;
 }

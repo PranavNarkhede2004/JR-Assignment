@@ -9,4 +9,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class ShippingChargeResponse {
     private double shippingCharge;
+    private String customerStoreType;
+    private Integer customerLoyaltyPoints;
 }

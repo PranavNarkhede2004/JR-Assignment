@@ -11,4 +11,5 @@ import lombok.NoArgsConstructor;
 public class WarehouseResponse {
     private String warehouseId;
     private LocationDto warehouseLocation;
+    private boolean isColdStorageAvailable;
 }

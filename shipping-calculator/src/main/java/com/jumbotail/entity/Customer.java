@@ -17,4 +17,7 @@ public class Customer {
     private String phoneNumber;
     private double lat;
     private double lng;
+
+    private String storeType;
+    private int loyaltyPoints;
 }

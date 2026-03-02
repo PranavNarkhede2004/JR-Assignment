@@ -16,4 +16,7 @@ public class Seller {
     private String name;
     private double lat;
     private double lng;
+
+    private double rating;
+    private boolean isVerified;
 }

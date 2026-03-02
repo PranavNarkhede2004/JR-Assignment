@@ -20,6 +20,13 @@ A robust Spring Boot application for calculating delivery shipping charges in a 
 - **Service Layering**: Business logic separated from controllers using `PricingService`, `WarehouseService`, and `ShippingService`.
 - **In-Memory Seeding**: Pre-seeds realistic dummy data mapped exactly from assignment constraints on application startup using a `CommandLineRunner`.
 
+### Extra "Creative" B2B Enhancements
+To align perfectly with the context of a Kirana B2B marketplace, the following non-breaking properties were added directly to the models:
+- **`Customer`**: `storeType` (e.g., Grocery), `loyaltyPoints`
+- **`Seller`**: `rating` (0 to 5.0), `isVerified`
+- **`Product`**: `category` (e.g., FMCG, Grains), `minimumOrderQuantity` (for wholesale constraints)
+- **`Warehouse`**: `isColdStorageAvailable`
+
 ## How To Run
 ```powershell
 .\mvnw.cmd spring-boot:run

@@ -21,7 +21,10 @@ public class Product {
     private double widthInCm;
     private double lengthInCm;
     private double heightInCm;
-    
+
+    private String category;
+    private int minimumOrderQuantity;
+
     @ManyToOne
     @JoinColumn(name = "seller_id")
     private Seller seller;
